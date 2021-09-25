@@ -10,12 +10,17 @@ function HowDoYouFeel () {
 
     // need to use dispatch to send to Redux store
     const handleClick = () => {
+        if (feedbackNumber === '') {
+            alert ('enter a number');
+            return
+        }
         dispatch({
             type: 'FEELING_FEEDBACK',
             payload: {
                 pg1: feedbackNumber
             },
         })
+        history.push('/understand');
     }
 
     return (
@@ -29,7 +34,7 @@ function HowDoYouFeel () {
             onChange={ (event) => setFeedbackNumber(event.target.value)}
         />
 
-        <button onClick={ () => history.push('/understand') }>Next</button> {/** To next page! */}
+        <button onClick={ handleClick }>Next</button> {/** To next page! */}
         </>
     )
 }
