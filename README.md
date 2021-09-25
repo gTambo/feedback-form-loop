@@ -6,7 +6,6 @@
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 ## Checklist
 
@@ -15,7 +14,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] index.js page prepped with combine reducers
 - [ ] **GOAL: write comments as you go!**
 - [x] Router in App.jsx
-- [ ] Header component with basic styling, imported into App
+- [x] Header component imported into App
 - [ ] page1 component
     - [ ] input form for type number, required
     - [ ] reducer in index
@@ -41,6 +40,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     - [ ] reset dispatcher
     - [ ] start new review button nav to page 1
 - [ ] additional basic styling
+- [ ] Update ReadMe (remove line at top)
+    - [ ] Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 ## Stretch Goals 
 
