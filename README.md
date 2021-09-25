@@ -10,9 +10,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ## Checklist
 
-- [ ] Initialize database and table(s)
-- [ ] Check files and setup
-- [ ] index.js page prepped with combine reducers
+- [x] Initialize database and table(s)
+- [x] Check files and setup
+- [x] index.js page prepped with combine reducers
 - [ ] **GOAL: write comments as you go!**
 - [ ] Router in App.jsx
 - [ ] Header component with basic styling, imported into App
@@ -36,7 +36,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     - [ ] display feedback items (form or table or ul or div?)
     - [ ] Object to Post
     - [ ] axios POST on submit
-    - [ ] 
+    - [ ] anything else?
 - [ ] success and reset page component
     - [ ] reset dispatcher
     - [ ] start new review button nav to page 1
