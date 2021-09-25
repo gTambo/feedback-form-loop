@@ -15,18 +15,18 @@ Your project description goes here. What problem did you solve? How did you solv
 - [ ] **GOAL: write comments as you go!**
 - [x] Router in App.jsx
 - [x] Header component imported into App
-- [ ] page1 component
+- [x] page1 component
     - [x] input form for type number, required
     - [x] reducer in index
     - [x] dispatch input as number
     - [x] next button with link/history.push
     - [x] display message if incomplete field
-- [ ] page2 component
+- [x] page2 component
     - [x] model after page1
     - [x] added route to page one reducer
-- [ ] page3 component
+- [x] page3 component
     - [x] like pages 1 and 2
-    - [ ] 
+    - [x] Add supporteed route to page one reducer
 - [ ] page4 component
     - [ ] input form for string
     - [ ] dispatch string

@@ -24,7 +24,7 @@ function Understanding () {
 
     return (
         <>
-        <p>How are you feeling today, on a scale of 1-5?</p>
+        <p>How well do you understand the content, on a scale of 1-5?</p>
         <input required 
                 type="number" 
                 placeholder="0 - 5"

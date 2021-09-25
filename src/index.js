@@ -15,12 +15,15 @@ const pageOneReducer = (state = [], action) => {
             return state;
         }
         return [...state, action.payload];
-    }
-    if (action.type === 'UNDERSTANDING_FEEDBACK') {
+    } else if (action.type === 'UNDERSTANDING_FEEDBACK') {
+        return [...state, action.payload];
+    } else if (action.type === 'SUPPORTED_FEEDBACK') {
         return [...state, action.payload];
     }
+
     return state;
 }
+
 
 const storeInstance = createStore(
     combineReducers({
