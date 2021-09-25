@@ -16,6 +16,9 @@ const pageOneReducer = (state = [], action) => {
         }
         return [...state, action.payload];
     }
+    if (action.type === 'UNDERSTANDING_FEEDBACK') {
+        return [...state, action.payload];
+    }
     return state;
 }
 

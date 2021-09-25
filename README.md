@@ -17,10 +17,10 @@ Your project description goes here. What problem did you solve? How did you solv
 - [x] Header component imported into App
 - [ ] page1 component
     - [x] input form for type number, required
-    - [ ] reducer in index
-    - [ ] dispatch input as number
+    - [x] reducer in index
+    - [x] dispatch input as number
     - [x] next button with link/history.push
-    - [ ] display message if incomplete field
+    - [x] display message if incomplete field
 - [ ] page2 component
     - [x] model after page1
     - [ ] new reducer, or dispatch to same reducer?

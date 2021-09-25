@@ -31,9 +31,8 @@ function HowDoYouFeel () {
             type="number" 
             placeholder="0 - 5" 
             value={feedbackNumber} 
-            onChange={ (event) => setFeedbackNumber(event.target.value)}
+            onChange={ (event) => setFeedbackNumber(event.target.value) }
         />
-
         <button onClick={ handleClick }>Next</button> {/** To next page! */}
         </>
     )
