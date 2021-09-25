@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import HowDoYouFeel from '../PageOne/PageOne';
+import Understanding from '../PageTwo/PageTwo';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
             Page 1 of 4 <HowDoYouFeel />
           </Route>
           <Route exact path="/understand">
-            Page Two {/** <PageTwo /> */}
+            Page 2 of <Understanding />
           </Route>
           <Route exact path= "/supported">
             Page Three {/** <PageThree /> */}

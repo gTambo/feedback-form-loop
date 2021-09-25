@@ -23,9 +23,10 @@ Your project description goes here. What problem did you solve? How did you solv
     - [x] display message if incomplete field
 - [ ] page2 component
     - [x] model after page1
-    - [ ] new reducer, or dispatch to same reducer?
+    - [x] added route to page one reducer
 - [ ] page3 component
     - [x] like pages 1 and 2
+    - [ ] 
 - [ ] page4 component
     - [ ] input form for string
     - [ ] dispatch string
