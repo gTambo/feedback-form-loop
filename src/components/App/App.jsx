@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import HowDoYouFeel from '../PageOne/PageOne';
 import Understanding from '../PageTwo/PageTwo';
 import IsSupported from '../PageThree/PageThree';
+import Commentate from '../PageFour/PageFour';
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
             Page 3 of 4<IsSupported />
           </Route>
           <Route exact path="/comment">
-            Page Four {/** <PageFour /> */}
+            Page 4 of 4 <Commentate />
           </Route>
           <Route exact path="/review">
             Review and Submit {/** <ReviewSubmit /> */}

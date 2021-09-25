@@ -19,6 +19,8 @@ const pageOneReducer = (state = [], action) => {
         return [...state, action.payload];
     } else if (action.type === 'SUPPORTED_FEEDBACK') {
         return [...state, action.payload];
+    } else if (action.type === 'COMMENT_FEEDBACK') {
+        return [...state, action.payload];
     }
 
     return state;
