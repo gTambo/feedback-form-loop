@@ -10,6 +10,9 @@ import logger from 'redux-logger';
 const pageOneReducer = (state = [], action) => {
     console.log('Page One Reducer');
     // TODO: determine what to return
+    if (action.type === 'FEELING_FEEDBACK') {
+        return [...state, action.payload];
+    }
     return state;
 }
 

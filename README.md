@@ -14,7 +14,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] Check files and setup
 - [x] index.js page prepped with combine reducers
 - [ ] **GOAL: write comments as you go!**
-- [ ] Router in App.jsx
+- [x] Router in App.jsx
 - [ ] Header component with basic styling, imported into App
 - [ ] page1 component
     - [ ] input form for type number, required
