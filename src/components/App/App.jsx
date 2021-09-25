@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import HowDoYouFeel from '../PageOne/PageOne';
 import Understanding from '../PageTwo/PageTwo';
+import IsSupported from '../PageThree/PageThree';
 
 function App() {
 
@@ -23,10 +24,10 @@ function App() {
             Page 1 of 4 <HowDoYouFeel />
           </Route>
           <Route exact path="/understand">
-            Page 2 of <Understanding />
+            Page 2 of 4<Understanding />
           </Route>
           <Route exact path= "/supported">
-            Page Three {/** <PageThree /> */}
+            Page 3 of 4<IsSupported />
           </Route>
           <Route exact path="/comment">
             Page Four {/** <PageFour /> */}
