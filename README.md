@@ -16,16 +16,16 @@ Your project description goes here. What problem did you solve? How did you solv
 - [x] Router in App.jsx
 - [x] Header component imported into App
 - [ ] page1 component
-    - [ ] input form for type number, required
+    - [x] input form for type number, required
     - [ ] reducer in index
     - [ ] dispatch input as number
-    - [ ] next button with link/history.push
+    - [x] next button with link/history.push
     - [ ] display message if incomplete field
 - [ ] page2 component
-    - [ ] model after page1
+    - [x] model after page1
     - [ ] new reducer, or dispatch to same reducer?
 - [ ] page3 component
-    - [ ] like pages 1 and 2
+    - [x] like pages 1 and 2
 - [ ] page4 component
     - [ ] input form for string
     - [ ] dispatch string

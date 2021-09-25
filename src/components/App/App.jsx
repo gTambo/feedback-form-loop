@@ -3,24 +3,23 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
+import HowDoYouFeel from '../PageOne/PageOne';
 
 function App() {
 
   return (
     <div className='App'>
-      
+      <Header />
+      {/* Router file tree below */}
       <Router>
         <div>
-          <Header />
           <ul>
             <li>Links would go here, but not today, Jr.</li> {/** to remove later */}
           </ul>
           <hr />
+          {/* Page one set to Home page, consider separate home page */}
           <Route exact path="/">
-            Home {/** <Home /> */}
-          </Route>
-          <Route exact path="/feel">
-            Page One {/** <PageOne /> */}
+            Page 1 of 4 <HowDoYouFeel />
           </Route>
           <Route exact path="/understand">
             Page Two {/** <PageTwo /> */}
