@@ -28,3 +28,19 @@ h4 {
   color: blueviolet;
   font-size: xx-large;
 }
+
+input {
+  width: 4rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.comment-field {
+  height: auto;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.announce-success{
+  margin: 10%;
+}

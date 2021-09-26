@@ -42,8 +42,7 @@ I implemented the following steps to build this application:
     - [x] reset dispatcher
     - [x] start new review button nav to page 1
 - [ ] additional basic styling
-- [ ] Update ReadMe (remove line at top)
-    - [ ] Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+- [x] Update ReadMe (remove line at top)
 - [ ] still needs more code comments
 
 ### Stretch Goals 

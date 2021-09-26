@@ -19,8 +19,10 @@ function Commentate () {
     return (
         <>
         <p>Do you have any additional comments?</p>
+        <p>{feedbackComment}</p>
         <form onSubmit={ handleClick } className="submit-field">
-        <input type="text" 
+        <input className="comment-field"
+                type="text" 
                 placeholder="Please share your thoughts"
                 value={feedbackComment}
                 onChange={ (event) => setFeedbackComment(event.target.value) }        
