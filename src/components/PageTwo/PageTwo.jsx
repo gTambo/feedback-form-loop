@@ -6,18 +6,16 @@ function Understanding () {
 
     const history = useHistory(); 
     const dispatch = useDispatch();
-    const [feedbackNumber, setFeedbackNumber] = useState('');
+    const [understandingNumber, setUnderstandingNumber] = useState('');
 
     const handleClick = () => {
-        if (feedbackNumber === '') {
+        if (understandingNumber === '') {
             alert ('enter a number');
             return
         }
         dispatch({
             type: 'UNDERSTANDING_FEEDBACK',
-            payload: {
-                pg2: feedbackNumber
-            },
+            payload: understandingNumber,
         })
         history.push('/supported');
     }
@@ -28,8 +26,8 @@ function Understanding () {
         <input required 
                 type="number" 
                 placeholder="0 - 5"
-                value={feedbackNumber}
-                onChange={ (event) => setFeedbackNumber(event.target.value) } 
+                value={understandingNumber}
+                onChange={ (event) => setUnderstandingNumber(event.target.value) } 
         />
         <button onClick={ handleClick }>Next</button>
         </>

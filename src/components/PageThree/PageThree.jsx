@@ -6,18 +6,16 @@ function IsSupported () {
 
     const history = useHistory();
     const dispatch = useDispatch();
-    const [feedbackNumber, setFeedbackNumber] = useState('');
+    const [supportNumber, setSupptorNumber] = useState('');
 
     const handleClick = () => {
-        if (feedbackNumber === '') {
+        if (supportNumber === '') {
             alert ('enter a number');
             return
         }
         dispatch({
             type: 'SUPPORTED_FEEDBACK',
-            payload: {
-                pg3: feedbackNumber
-            },
+            payload: supportNumber,
         })
         history.push('/comment');
     }
@@ -28,8 +26,8 @@ function IsSupported () {
         <input required 
                 type="number"
                 placeholder="0 - 5"
-                value={feedbackNumber}
-                onChange={ (event) => setFeedbackNumber(event.target.value) }
+                value={supportNumber}
+                onChange={ (event) => setSupptorNumber(event.target.value) }
         />
         <button onClick={ handleClick }>Next</button>
         </>

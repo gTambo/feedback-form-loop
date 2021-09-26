@@ -12,9 +12,7 @@ function Commentate () {
 
         dispatch({
             type: 'COMMENT_FEEDBACK',
-            payload: {
-                pg4: feedbackComment
-            },
+            payload: feedbackComment,
         })
         history.push('/review');
     }

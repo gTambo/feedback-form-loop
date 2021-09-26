@@ -26,6 +26,8 @@ const pageOneReducer = (state = [], action) => {
     return state;
 }
 
+// const pageTwoReducer
+
 
 const storeInstance = createStore(
     combineReducers({

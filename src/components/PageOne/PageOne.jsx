@@ -6,19 +6,17 @@ function HowDoYouFeel () {
     // set imports to variables
     const history = useHistory();
     const dispatch = useDispatch();
-    const [feedbackNumber, setFeedbackNumber] = useState('');
+    const [feelingNumber, setFeelingNumber] = useState('');
 
     // need to use dispatch to send to Redux store
     const handleClick = () => {
-        if (feedbackNumber === '') {
+        if (feelingNumber === '') {
             alert ('enter a number');
             return
         }
         dispatch({
             type: 'FEELING_FEEDBACK',
-            payload: {
-                pg1: feedbackNumber
-            },
+            payload: feelingNumber,
         })
         history.push('/understand');
     }
@@ -30,8 +28,8 @@ function HowDoYouFeel () {
             required 
             type="number" 
             placeholder="0 - 5" 
-            value={feedbackNumber} 
-            onChange={ (event) => setFeedbackNumber(event.target.value) }
+            value={feelingNumber} 
+            onChange={ (event) => setFeelingNumber(event.target.value) }
         />
         <button onClick={ handleClick }>Next</button> {/** To next page! */}
         </>

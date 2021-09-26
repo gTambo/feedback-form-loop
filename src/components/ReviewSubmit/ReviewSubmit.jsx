@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { json } from 'express';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -8,33 +7,33 @@ function ReviewFeedback () {
     const history = useHistory();
     const pageOneReducer = useSelector(store => store.pageOneReducer);
     // set item to post
-    let itemToPost = {
-        pg1: pageOneReducer.pg1,
-        pg2: pageOneReducer.pg2,
-        pg3: pageOneReducer.pg3,
-        pg4: pageOneReducer.pg4,
+    const itemToPost = {
+        feeling: pageOneReducer[0],
+        understanding: pageOneReducer[1],
+        support: pageOneReducer[2],
+        comments: pageOneReducer[3],
     };
 
     // need axios post
     // axios({
     //     method: 'POST',
-    //     url: 
-    //     data: 
-    // })
+    //     url: '/feedback',
+    //     data: itemToPost,
+    // }) // TODO: add .then and .catch 
 
     const handleSubmit = () => {
-        console.log('in handle submit');
+        console.log('in handle submit', itemToPost);
     }
 
     return (
         <>
             {/* display feedback from redux here */}
-            {JSON.stringify(pageOneReducer)}
+            {JSON.stringify(itemToPost)}
             {/* <div>
                 {pageOneReducer.map( feedback => <p>{feedback}</p>)}
             </div> */}
             {/* handle submit on click */}
-            <button type="submit" onclick={handleSubmit}></button>
+            <button type="submit" onClick={handleSubmit}>Submit</button>
         </>
     )
 }
