@@ -15,8 +15,6 @@ const pageOneReducer = (state = [], action) => {
             return state;
         }
         return [...state, action.payload];
-    } else if (action.type === 'UNDERSTANDING_FEEDBACK') {
-        return [...state, action.payload];
     } else if (action.type === 'SUPPORTED_FEEDBACK') {
         return [...state, action.payload];
     } else if (action.type === 'COMMENT_FEEDBACK') {
@@ -26,13 +24,20 @@ const pageOneReducer = (state = [], action) => {
     return state;
 }
 
-// const pageTwoReducer
+const pageTwoReducer = (state = [], action) => {
+    if (action.type === 'UNDERSTANDING_FEEDBACK') {
+        return [...state, action.payload];
+    }
+        return state;
+}
+
 
 
 const storeInstance = createStore(
     combineReducers({
         // needs reducer
         pageOneReducer,
+        pageTwoReducer,
     }),
     applyMiddleware(logger) // for multi-state console logs
 );

@@ -5,13 +5,13 @@ import { useHistory } from 'react-router-dom';
 function ReviewFeedback () {
 
     const history = useHistory();
-    const pageOneReducer = useSelector(store => store.pageOneReducer);
+    const reduxStore = useSelector(store => store);
     // set item to post
     const itemToPost = {
-        feeling: pageOneReducer[0],
-        understanding: pageOneReducer[1],
-        support: pageOneReducer[2],
-        comments: pageOneReducer[3],
+        feeling: reduxStore.pageOneReducer[0],
+        understanding: reduxStore.pageTwoReducer,
+        support: reduxStore.pageOneReducer[1],
+        comments: reduxStore.pageOneReducer[2],
     };
 
     // need axios post
