@@ -8,6 +8,7 @@ import Understanding from '../PageTwo/PageTwo';
 import IsSupported from '../PageThree/PageThree';
 import Commentate from '../PageFour/PageFour';
 import ReviewFeedback from '../ReviewSubmit/ReviewSubmit';
+import Reset from '../Reset/Reset';
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
             Review and Submit <ReviewFeedback />
           </Route>
           <Route exact path="/reset">
-            Success and Restart {/** <Reset /> */}
+            Success and Restart <Reset />
           </Route>
         </div>
       </Router>

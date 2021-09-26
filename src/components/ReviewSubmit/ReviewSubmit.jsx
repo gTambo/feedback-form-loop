@@ -14,15 +14,21 @@ function ReviewFeedback () {
         comments: pageReducer[3],
     };
 
-    // need axios post
-    axios({
-        method: 'POST',
-        url: '/feedback',
-        data: itemToPost,
-    }) // TODO: add .then and .catch 
+    
 
     const handleSubmit = () => {
         console.log('in handle submit', itemToPost);
+        // need axios post
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: itemToPost,
+        }).then( response => {
+            console.log('posted feedback: ', response);
+            history.push('/reset')
+        }).catch( error => {
+            console.log('Error in post', error);
+        }) // TODO: add .then and .catch 
     }
 
     return (
