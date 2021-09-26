@@ -21,6 +21,8 @@ const pageReducer = (state = [], action) => {
         return [...state, action.payload];
     } else if (action.type === 'COMMENT_FEEDBACK') {
         return [...state, action.payload];
+    } else if (action.type === 'RESET_ALL') {
+        return [];
     }
 
     return state;

@@ -36,7 +36,7 @@ function ReviewFeedback () {
             {/* display feedback from redux here */}
             {JSON.stringify(itemToPost)}
             <div>
-                {pageReducer.map( feedback => <p>{feedback}</p>)}
+                {pageReducer.map( (feedback, index) => <p key={index}>{feedback}</p>)}
             </div>
             {/* handle submit on click */}
             <button type="submit" onClick={handleSubmit}>Submit</button>
