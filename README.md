@@ -27,17 +27,17 @@ Your project description goes here. What problem did you solve? How did you solv
 - [x] page3 component
     - [x] like pages 1 and 2
     - [x] Add supporteed route to page one reducer
-- [ ] page4 component
-    - [ ] input form for string
-    - [ ] dispatch string
-- [ ] express post route
-- [ ] review and submit page component
-    - [ ] useSelector for feedback item(s)
-    - [ ] display feedback items (form or table or ul or div?)
-    - [ ] Object to Post
-    - [ ] axios POST on submit
+- [x] page4 component
+    - [x] input form for string
+    - [x] dispatch string
+- [x] express post route
+- [x] review and submit page component
+    - [x] useSelector for feedback item(s)
+    - [x] display feedback items (form or table or ul or div?)
+    - [x] Object to Post
+    - [x] axios POST on submit
     - [ ] anything else?
-- [ ] success and reset page component
+- [x] success and reset page component
     - [ ] reset dispatcher
     - [ ] start new review button nav to page 1
 - [ ] additional basic styling

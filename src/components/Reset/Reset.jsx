@@ -11,6 +11,7 @@ function Reset () {
 
     return (
         <div>
+            <p className="announce-success">Thanks For Your Feedback!</p>
             <p>Submit new feedback</p>
             <button onClick={ handleReset }>Start Over</button>
         </div>
