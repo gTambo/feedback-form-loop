@@ -8,8 +8,8 @@ function Commentate () {
     const dispatch = useDispatch();
     const [feedbackComment, setFeedbackComment] = useState('');
 
-    const handleClick = () => {
-
+    const handleClick = (event) => {
+        event.preventDefault();
         dispatch({
             type: 'COMMENT_FEEDBACK',
             payload: feedbackComment,
@@ -19,12 +19,14 @@ function Commentate () {
     return (
         <>
         <p>Do you have any additional comments?</p>
+        <form onSubmit={ handleClick } className="submit-field">
         <input type="text" 
                 placeholder="Please share your thoughts"
                 value={feedbackComment}
                 onChange={ (event) => setFeedbackComment(event.target.value) }        
         />
-        <button onClick={ handleClick }>Next</button>
+        <button type="submit">Next</button>
+        </form>
         </>
     )
 }

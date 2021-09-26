@@ -16,7 +16,8 @@ function ReviewFeedback () {
 
     
 
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
         console.log('in handle submit', itemToPost);
         // need axios post
         axios({
@@ -34,12 +35,14 @@ function ReviewFeedback () {
     return (
         <>
             {/* display feedback from redux here */}
-            {JSON.stringify(itemToPost)}
+            {/* {JSON.stringify(itemToPost)} */}
             <div>
                 {pageReducer.map( (feedback, index) => <p key={index}>{feedback}</p>)}
             </div>
             {/* handle submit on click */}
-            <button type="submit" onClick={handleSubmit}>Submit</button>
+            <form onSubmit={ handleSubmit } className="submit-field">
+            <button type="submit">Submit</button>
+            </form>
         </>
     )
 }

@@ -8,16 +8,28 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 const pageReducer = (state = [], action) => {
-    console.log('Page One Reducer');
+    console.log('Feedback Page Reducer');
     // TODO: determine what to return
     if (action.type === 'FEELING_FEEDBACK') {
-        if (action.payload.pg1 === '') {
-            return state;
-        } 
+        if (action.payload > 5 ) { // keeping values inside requested parameters
+            return [...state, 5];
+        } else if (action.payload < 0) {
+            return [...state, 0];
+        }
         return [...state, action.payload];
     } else if (action.type === 'UNDERSTANDING_FEEDBACK') {
+        if (action.payload > 5 ) { // keeping values inside requested parameters
+            return [...state, 5];
+        } else if (action.payload < 0) {
+            return [...state, 0];
+        }
         return [...state, action.payload];
     } else if (action.type === 'SUPPORTED_FEEDBACK') {
+        if (action.payload > 5 ) { // keeping values inside requested parameters
+            return [...state, 5];
+        } else if (action.payload < 0) {
+            return [...state, 0];
+        }
         return [...state, action.payload];
     } else if (action.type === 'COMMENT_FEEDBACK') {
         return [...state, action.payload];
