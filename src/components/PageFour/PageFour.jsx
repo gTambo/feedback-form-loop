@@ -29,6 +29,7 @@ function Commentate () {
         />
         <button type="submit">Next</button>
         </form>
+        <button onClick={ () => history.push("/supported") }>Previous Page</button>
         </>
     )
 }

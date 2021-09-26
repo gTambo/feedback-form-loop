@@ -50,6 +50,10 @@ function ReviewFeedback () {
         }) // TODO: add .then and .catch 
     }
 
+    // const goBack = () => {
+    //     history.goBack();
+    // }
+
     return (
         <>
             <select onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect(selector)} >
@@ -67,6 +71,7 @@ function ReviewFeedback () {
             <form onSubmit={ handleSubmit } className="submit-field">
             <button type="submit">Submit</button>
             </form>
+            <button onClick={ () => history.push("/comment") }>Previous Page</button>
         </>
     )
 }

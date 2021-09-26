@@ -11,11 +11,14 @@ function Reset () {
     }
 
     return (
+        <>
         <form onSubmit={ handleReset } className="submit-field">
             <p className="announce-success">Thanks For Your Feedback!</p>
             <p>Submit new feedback</p>
             <button type="submit">Start Over</button>
         </form>
+            <button onClick={ () => history.goBack() }>Back</button>
+        </>
     )
 }
 

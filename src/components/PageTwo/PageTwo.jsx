@@ -34,6 +34,7 @@ function Understanding () {
         />
         <button type="submit">Next</button>
         </form>
+        <button onClick={ () => history.push("/") }>Previous Page</button>
         </>
     )
 }

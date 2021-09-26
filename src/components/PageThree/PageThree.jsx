@@ -34,6 +34,7 @@ function IsSupported () {
         />
         <button type="submit">Next</button>
         </form>
+        <button onClick={ () => history.push("/understand") }>Previous Page</button>
         </>
     )
 }
