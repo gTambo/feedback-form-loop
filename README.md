@@ -4,8 +4,56 @@ Created a 4-page survey for gathering feedback, with a review page for submissio
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+__Duration: 2-day sprint__
 
+``` // Check out this code 
+    // It's an example of a component for a page to leave feedback.
+    // I wrote four of these
+    function IsSupported () {
+
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const [supportNumber, setSupptorNumber] = useState('');
+
+    const handleClick = () => {
+        if (supportNumber === '') {
+            alert ('enter a number');
+            return
+        }
+        dispatch({
+            type: 'SUPPORTED_FEEDBACK',
+            payload: supportNumber,
+        })
+        history.push('/comment');
+    }
+
+    return (
+        <>
+        <p>How well supported are you, on a scale of 1-5?</p>
+        <input required 
+                type="number"
+                placeholder="0 - 5"
+                value={supportNumber}
+                onChange={ (event) => setSupptorNumber(event.target.value) }
+        />
+        <button onClick={ handleClick }>Next</button>
+        </>
+    )
+}
+```
+
+### Prerequisites
+
+Link to software that is required to install the app (e.g. node).
+
+- [Node.js](https://nodejs.org/en/)
+- List other prerequisites here: __TO DO: get links__
+- [React]
+- [Redux]
+- [Express]
+- [Axios]
+- [logger]
+- [Postgresql]
 
 ## Checklist
 
