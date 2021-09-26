@@ -1,6 +1,6 @@
-# Project Name
+# Proth Weekend Feeback Survey Challenge
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Created a 4-page survey for gathering feedback, with a review page for submission, and redirect back to the start.
 
 ## Description
 
@@ -38,11 +38,12 @@ Your project description goes here. What problem did you solve? How did you solv
     - [x] axios POST on submit
     - [ ] anything else?
 - [x] success and reset page component
-    - [ ] reset dispatcher
-    - [ ] start new review button nav to page 1
+    - [x] reset dispatcher
+    - [x] start new review button nav to page 1
 - [ ] additional basic styling
 - [ ] Update ReadMe (remove line at top)
     - [ ] Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+- [ ] still needs more code comments
 
 ## Stretch Goals 
 
