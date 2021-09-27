@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { Button, Paper } from '@material-ui/core';
 
 function Commentate () {
 
@@ -21,15 +22,16 @@ function Commentate () {
         <p>Do you have any additional comments?</p>
         <p>{feedbackComment}</p>
         <form onSubmit={ handleClick } className="submit-field">
+        <Paper elevation={3} style={{width: 'inherit'}}>
         <input className="comment-field"
                 type="text" 
                 placeholder="Please share your thoughts"
                 value={feedbackComment}
                 onChange={ (event) => setFeedbackComment(event.target.value) }        
-        />
-        <button type="submit">Next</button>
+        /></Paper>
+        <Button variant="contained" color="primary" type="submit">Next</Button>
         </form>
-        <button onClick={ () => history.push("/supported") }>Previous Page</button>
+        <Button variant="outlined" onClick={ () => history.push("/supported") }>Previous Page</Button>
         </>
     )
 }

@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
 
 function Understanding () {
 
@@ -32,9 +33,9 @@ function Understanding () {
                 value={understandingNumber}
                 onChange={ (event) => setUnderstandingNumber(event.target.value) } 
         />
-        <button type="submit">Next</button>
+        <Button variant="contained" color="primary" type="submit">Next</Button>
         </form>
-        <button onClick={ () => history.push("/") }>Previous Page</button>
+        <Button variant="outlined" color="primary" onClick={ () => history.push("/") }>Previous Page</Button>
         </>
     )
 }

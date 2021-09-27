@@ -1,3 +1,4 @@
+const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool.js');
@@ -17,7 +18,18 @@ router.post('/', (req, res) => {
         .catch((error) => {
             console.log(`Error making database query ${sqlText}`, error);
             res.sendStatus(500); // Good server always responds
-        })
-})
+        });
+});
+
+router.get('/', (req, res) => {
+    console.log('GET previous feedback');
+    pool.query('SELECT * FROM feedback;')
+    .then( (result) => {
+        res.send(result.rows)
+    }).catch( err => {
+        console.log('Error in get', err);
+        res.sendStatus(500);
+    });
+});
 
 module.exports = router;

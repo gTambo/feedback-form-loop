@@ -1,5 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch} from 'react-redux';
+import { Button, Paper } from '@material-ui/core';
+
 function Reset () {
     const history = useHistory();
     const dispatch = useDispatch();
@@ -14,10 +16,10 @@ function Reset () {
         <>
         <form onSubmit={ handleReset } className="submit-field">
             <p className="announce-success">Thanks For Your Feedback!</p>
-            <p>Submit new feedback</p>
-            <button type="submit">Start Over</button>
+            <Paper elevation={2}>Submit new feedback</Paper>
+            <Button variant="contained" type="submit">Start Over</Button>
         </form>
-            <button onClick={ () => history.goBack() }>Back</button>
+            <Button variant="outlined" onClick={ () => history.goBack() }>Back</Button>
         </>
     )
 }

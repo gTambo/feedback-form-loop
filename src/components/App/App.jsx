@@ -18,10 +18,6 @@ function App() {
       {/* Router file tree below */}
       <Router>
         <div>
-          <ul>
-            <li>Links would go here, but not today, Jr.</li> {/** to remove later */}
-          </ul>
-          <hr />
           {/* Page one set to Home page, consider separate home page */}
           <Route exact path="/">
             Page 1 of 4 <HowDoYouFeel />

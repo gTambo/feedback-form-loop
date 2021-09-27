@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Button, Paper } from '@material-ui/core';
 
 function HowDoYouFeel () {
     // set imports to variables
@@ -24,7 +25,7 @@ function HowDoYouFeel () {
 
     return (
         <>
-        <p>How are you feeling today, on a scale of 1-5?</p>
+        <Paper elevation={2} className="description">How are you feeling today, on a scale of 1-5?</Paper>
         <form onSubmit={ handleClick } className="submit-field">
         <input 
             required 
@@ -34,7 +35,7 @@ function HowDoYouFeel () {
             value={feelingNumber} 
             onChange={ (event) => setFeelingNumber(event.target.value) }
         />
-        <button onClick={ handleClick }>Next</button> {/** To next page! */}
+        <Button variant="contained" color="primary" onClick={ handleClick }>Next</Button> {/** To next page! */}
         </form>
         </>
     )

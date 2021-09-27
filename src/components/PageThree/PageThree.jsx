@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import Button from '@material-ui/core/Button';
 
 function IsSupported () {
 
@@ -32,9 +33,9 @@ function IsSupported () {
                 value={supportNumber}
                 onChange={ (event) => setSupptorNumber(event.target.value) }
         />
-        <button type="submit">Next</button>
+        <Button variant="contained" color="primary" type="submit">Next</Button>
         </form>
-        <button onClick={ () => history.push("/understand") }>Previous Page</button>
+        <Button variant="outlined" onClick={ () => history.push("/understand") }>Previous Page</Button>
         </>
     )
 }
