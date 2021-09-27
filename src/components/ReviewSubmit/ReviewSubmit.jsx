@@ -16,9 +16,9 @@ function ReviewFeedback () {
         comments: storeInstance.pageFourReducer[0],
     };
 
-    const handleSelect = (dropdown) => { // receives 'selector' variable from dropdown menu
-        console.log("in handleSelect; selector = ", dropdown);
-        switch(dropdown) { 
+    const handleSelect = () => { // receives 'selector' variable from dropdown menu
+        console.log("in handleSelect; selector = ", selector);
+        switch(selector) { 
             case "page 1":
                 history.push('/');
                 break;
@@ -53,16 +53,20 @@ function ReviewFeedback () {
 
     return (
         <> {/** included dropdown selector for easy navigation to any page */}
-            <select onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect(selector)} >
-                <option value="page 1" >Page 1</option> /
+            <select value={selector} onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect()} >
+                <option value="">Select page</option>
+                <option value="page 1">Page 1</option>
                 <option value="page 2">Page 2</option>
                 <option value="page 3">Page 3</option>
                 <option value="page 4">Page 4</option>
             </select> {/** still fuzzy on how the logic worked in the selector, 
-             * but I got it to do what I wanted with some trial and error */}
+             * but I got it to do what I wanted with some trial and error 
+             * I am also still occasionally getting the following warning: 
+             * Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.*/}
+
             {/* display feedback from redux here */}
             {/* {JSON.stringify(itemToPost)} */}
-            <div> {/** no .map with separate reducers */}
+            <div className="description"> {/** no .map with separate reducers */}
                 <p>{itemToPost.feeling}</p>
                 <p>{itemToPost.understanding}</p>
                 <p>{itemToPost.support}</p>

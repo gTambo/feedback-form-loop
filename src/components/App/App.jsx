@@ -16,8 +16,8 @@ function App() {
     <div className='App'>
       <Header />
       {/* Router file tree below */}
-      <Router>
-        <div>
+      <Router >
+        <div className="pages" >
           {/* Page one set to Home page, consider separate home page */}
           <Route exact path="/">
             Page 1 of 4 <HowDoYouFeel />

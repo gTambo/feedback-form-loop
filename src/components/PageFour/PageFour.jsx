@@ -19,8 +19,8 @@ function Commentate () {
     }
     return (
         <>
-        <p>Do you have any additional comments?</p>
-        <p>{feedbackComment}</p>
+        <p className="description">Do you have any additional comments?</p>
+        {/* <p>{feedbackComment}</p> */} 
         <form onSubmit={ handleClick } className="submit-field">
         <Paper elevation={3} style={{width: 'inherit'}}>
         <input className="comment-field"

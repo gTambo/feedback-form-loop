@@ -24,7 +24,7 @@ function IsSupported () {
 
     return (
         <>
-        <p>How well supported are you, on a scale of 1-5?</p>
+        <p className="description">How well supported are you, on a scale of 1-5?</p>
         <form onSubmit={ handleClick } className="submit-field">
         <input required 
                 type="number"

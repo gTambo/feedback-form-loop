@@ -24,7 +24,7 @@ function Understanding () {
 
     return (
         <>
-        <p>How well do you understand the content, on a scale of 1-5?</p>
+        <p className="description">How well do you understand the content, on a scale of 1-5?</p>
         <form onSubmit={ handleClick } className='submit-field'>
         <input required
                 type="number" 

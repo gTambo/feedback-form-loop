@@ -30,11 +30,11 @@ const pageOneReducer = (state = [], action) => {
 const pageTwoReducer = (state = [], action) => {
     if (action.type === 'UNDERSTANDING_FEEDBACK') {
         if (action.payload > 5 ) { // keeping values inside requested parameters
-            return [...state, 5];
+            return [5];
         } else if (action.payload < 0) {
-            return [...state, 0];
+            return [0];
         }
-        return [...state, action.payload];
+        return [action.payload]; // single item arrays only, pls 
     } else if (action.type === 'RESET_ALL') { // empty the array upon reset
         return [];
     }

@@ -1,4 +1,5 @@
 .App {
+  
   text-align: center;
 }
 
@@ -43,4 +44,14 @@ input {
 
 .announce-success{
   margin: 10%;
+}
+
+.description{
+  font-size: 1.5rem;
+  color: #011d4b;
+}
+
+.pages{
+  font-style: italic;
+  color: rgba(97, 96, 96, 0.671);
 }
