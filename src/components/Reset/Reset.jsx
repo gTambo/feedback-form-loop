@@ -6,10 +6,11 @@ function Reset () {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    // all reducers will catch this
     const handleReset = (event) => {
         event.preventDefault();
-        dispatch({ type: 'RESET_ALL' });
-        history.push('/');
+        dispatch({ type: 'RESET_ALL' }); // reset state
+        history.push('/'); // then back to home/page 1
     }
 
     return (

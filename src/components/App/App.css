@@ -1,5 +1,5 @@
 .App {
-  
+
   text-align: center;
 }
 
@@ -54,4 +54,10 @@ input {
 .pages{
   font-style: italic;
   color: rgba(97, 96, 96, 0.671);
+}
+
+.records-table{
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #011d4b;
 }

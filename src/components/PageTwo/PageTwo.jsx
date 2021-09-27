@@ -4,22 +4,22 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 
 function Understanding () {
-
+    // set those imports to useable variables
     const history = useHistory(); 
     const dispatch = useDispatch();
     const [understandingNumber, setUnderstandingNumber] = useState('');
-
+    // call function on click/form submission to use dispatch to send to Redux store
     const handleClick = (event) => {
         event.preventDefault();
-        if (understandingNumber === '') {
+        if (understandingNumber === '') { // require some input
             alert ('enter a number');
             return
         }
         dispatch({
-            type: 'UNDERSTANDING_FEEDBACK',
+            type: 'UNDERSTANDING_FEEDBACK', // reducers will all get a crack at this 
             payload: understandingNumber,
         })
-        history.push('/supported');
+        history.push('/supported'); // next page now
     }
 
     return (

@@ -9,18 +9,18 @@ function HowDoYouFeel () {
     const dispatch = useDispatch();
     const [feelingNumber, setFeelingNumber] = useState('');
 
-    // need to use dispatch to send to Redux store
+    // call function on click/form submission to use dispatch to send to Redux store
     const handleClick = (event) => {
         event.preventDefault();
-        if (feelingNumber === '') {
+        if (feelingNumber === '') { // require defined input value
             alert ('enter a number');
             return
         }
         dispatch({
             type: 'FEELING_FEEDBACK',
-            payload: feelingNumber,
+            payload: feelingNumber, // drop it into redux
         })
-        history.push('/understand');
+        history.push('/understand'); // then go to next page
     }
 
     return (
@@ -34,7 +34,7 @@ function HowDoYouFeel () {
             placeholder="0 - 5" 
             value={feelingNumber} 
             onChange={ (event) => setFeelingNumber(event.target.value) }
-        />
+        /> {/** actively update input value */}
         <Button variant="contained" color="primary" onClick={ handleClick }>Next</Button> {/** To next page! */}
         </form>
         </>

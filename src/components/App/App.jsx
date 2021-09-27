@@ -9,6 +9,7 @@ import IsSupported from '../PageThree/PageThree';
 import Commentate from '../PageFour/PageFour';
 import ReviewFeedback from '../ReviewSubmit/ReviewSubmit';
 import Reset from '../Reset/Reset';
+import AdminPage from '../AdminPage/AdminPage';
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route exact path="/reset">
             Success and Restart <Reset />
+          </Route>
+          <Route exact path="/supersecret">
+            Admin <AdminPage />
           </Route>
         </div>
       </Router>

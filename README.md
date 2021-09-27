@@ -41,19 +41,17 @@ I implemented the following steps to build this application:
 - [x] success and reset page component
     - [x] reset dispatcher
     - [x] start new review button nav to page 1
-- [ ] additional basic styling
+- [x] additional basic styling
 - [x] Update ReadMe (remove line at top)
-- [ ] still needs more code comments
+- [x] still needs more code comments
 
 ### Stretch Goals 
 
-- [ ] Update score functionality (navigate back)
-    - [ ] may need to splice into redux state?
-    - [ ] 
-- [ ] material UI
+- [x] Update score functionality (navigate back)
+- [x] basic material UI
     - [ ] cards, snackbars, nav bar, icons, theme?
 - [ ] Admin page component
-    - [ ] display feedback Items from DB (axios and express GET)
+    - [x] display feedback Items from DB (axios and express GET)
     - [ ] allow delete (axios and express DELETE)
     - [ ] store Item to delete in redux state
     - [ ] confirm delete component 

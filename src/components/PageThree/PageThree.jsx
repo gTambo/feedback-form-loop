@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import Button from '@material-ui/core/Button';
 
+// This whole page is a lotlike the last two, with some different variable names
 function IsSupported () {
 
     const history = useHistory();
@@ -19,7 +20,7 @@ function IsSupported () {
             type: 'SUPPORTED_FEEDBACK',
             payload: supportNumber,
         })
-        history.push('/comment');
+        history.push('/comment'); //NEEXXXTT
     }
 
     return (

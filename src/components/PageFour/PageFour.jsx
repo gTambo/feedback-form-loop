@@ -4,23 +4,23 @@ import { useState } from 'react';
 import { Button, Paper } from '@material-ui/core';
 
 function Commentate () {
-
+    // using these imports later
     const history = useHistory();
     const dispatch = useDispatch();
     const [feedbackComment, setFeedbackComment] = useState('');
-
+    // using form, need to prevent default on enter keypress
     const handleClick = (event) => {
         event.preventDefault();
         dispatch({
             type: 'COMMENT_FEEDBACK',
-            payload: feedbackComment,
+            payload: feedbackComment, // this one actually is a string, NaN
         })
         history.push('/review');
     }
     return (
         <>
         <p className="description">Do you have any additional comments?</p>
-        {/* <p>{feedbackComment}</p> */} 
+        {/* <p>{feedbackComment}</p> look, it updates as I type! */} 
         <form onSubmit={ handleClick } className="submit-field">
         <Paper elevation={3} style={{width: 'inherit'}}>
         <input className="comment-field"
