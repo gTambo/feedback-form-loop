@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 function ReviewFeedback () {
     const [selector, setSelector] = useState('');
     const history = useHistory();
-    const pageReducer = useSelector(store => store.pageReducer);
+    const storeInstance = useSelector(store => store);
     // set item to post
     const itemToPost = {
-        feeling: pageReducer[0],
-        understanding: pageReducer[1],
-        support: pageReducer[2],
-        comments: pageReducer[3],
+        feeling: storeInstance.pageOneReducer[0], // grabbing item in array
+        understanding: storeInstance.pageTwoReducer[0],
+        support: storeInstance.pageThreeReducer[0],
+        comments: storeInstance.pageFourReducer[0],
     };
 
     const handleSelect = (dropdown) => {
@@ -65,7 +65,10 @@ function ReviewFeedback () {
             {/* display feedback from redux here */}
             {/* {JSON.stringify(itemToPost)} */}
             <div>
-                {pageReducer.map( (feedback, index) => <p key={index}>{feedback}</p>)}
+                <p>{itemToPost.feeling}</p>
+                <p>{itemToPost.understanding}</p>
+                <p>{itemToPost.support}</p>
+                <p>{itemToPost.comments}</p>
             </div>
             {/* handle submit on click */}
             <form onSubmit={ handleSubmit } className="submit-field">
