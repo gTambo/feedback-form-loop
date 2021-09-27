@@ -6,6 +6,8 @@ Created a 4-page survey for gathering feedback, with a review page for submissio
 
 __Duration: 2-day sprint__
 
+Before beginning the project, I thought through the data pathways and used a visual chart to help flesh out my thoughts [LucidChart](https://lucid.app/lucidchart/938a8683-1062-4b0d-a7f4-cedf301ba500/edit?view_items=VrncJSMH1AkJ&invitationId=inv_e9026113-ea6a-45ce-b2ce-f65ed9d0c22a)
+
 I implemented the following steps to build this application:
 
 ### Checklist 
@@ -99,7 +101,8 @@ Below is an example of the code I wrote for a component page to leave feedback, 
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+Here's what page one looks like 
+[Page One](../public/images/Page1.png)
 
 ### Prerequisites
 
