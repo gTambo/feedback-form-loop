@@ -102,7 +102,10 @@ Below is an example of the code I wrote for a component page to leave feedback, 
 ## Screen Shot
 
 Here's what page one looks like 
-[Page One](../public/images/Page1.png)
+[PageOne](./public/images/Page1.png)
+
+And the comment page: 
+[CommentsPage](./public/images/Page4.png)
 
 ### Prerequisites
 

@@ -8,6 +8,7 @@ function ReviewFeedback () {
     const [selector, setSelector] = useState('');
     const history = useHistory(); // for pushing to next page on click
     const storeInstance = useSelector(store => store); // will need entire store of reducers
+    // TODO: use destructuring for store
     // set item to post, using data from redux
     const itemToPost = {
         feeling: storeInstance.pageOneReducer[0], // grabbing item in array
