@@ -27,11 +27,11 @@ function HowDoYouFeel () {
         <>
         <Paper elevation={2} className="description">How are you feeling today, on a scale of 1-5?</Paper>
         <form onSubmit={ handleClick } className="submit-field">
-        <input 
-            required
+        <input required
             type="number" 
-            min='0' max='5'
-            placeholder="0 - 5" 
+            // some redundancy below
+            min='1' max='5' 
+            placeholder="1 - 5" 
             value={feelingNumber} 
             onChange={ (event) => setFeelingNumber(event.target.value) }
         /> {/** actively update input value */}

@@ -17,8 +17,8 @@ const pageOneReducer = (state = [], action) => {
     if (action.type === 'FEELING_FEEDBACK') {
         if (action.payload > 5 ) { // keeping values inside requested parameters
             return [5];
-        } else if (action.payload < 0) {
-            return [0];
+        } else if (action.payload < 1) {
+            return [1];
         }
         return [action.payload]; 
     } else if (action.type === 'RESET_ALL') { // empty the array upon reset
@@ -31,8 +31,8 @@ const pageTwoReducer = (state = [], action) => {
     if (action.type === 'UNDERSTANDING_FEEDBACK') {
         if (action.payload > 5 ) { // keeping values inside requested parameters
             return [5];
-        } else if (action.payload < 0) {
-            return [0];
+        } else if (action.payload < 1) {
+            return [1];
         }
         return [action.payload]; // single item arrays only, pls 
     } else if (action.type === 'RESET_ALL') { // empty the array upon reset
@@ -45,8 +45,8 @@ const pageThreeReducer = (state = [], action) => {
     if (action.type === 'SUPPORTED_FEEDBACK') {
         if (action.payload > 5 ) { // keeping values inside requested parameters
             return [5];
-        } else if (action.payload < 0) {
-            return [0];
+        } else if (action.payload < 1) {
+            return [1];
         }
         return [action.payload];
     } else if (action.type === 'RESET_ALL') { // empty the array upon reset

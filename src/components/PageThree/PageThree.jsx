@@ -29,8 +29,8 @@ function IsSupported () {
         <form onSubmit={ handleClick } className="submit-field">
         <input required 
                 type="number"
-                min='0' max='5'
-                placeholder="0 - 5"
+                min='1' max='5'
+                placeholder="1 - 5"
                 value={supportNumber}
                 onChange={ (event) => setSupptorNumber(event.target.value) }
         />

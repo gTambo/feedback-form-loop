@@ -54,7 +54,7 @@ And the comment page:
 ![CommentsPage](./public/images/Page4.png)
 
 And the review page:
-![ReviewPage](./public/images/ReviewPage.png)
+![ReviewPageAlt](./public/images/ReviewPageAlt.png)
 
 ### Prerequisites
 

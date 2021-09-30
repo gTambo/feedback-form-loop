@@ -68,10 +68,10 @@ function ReviewFeedback () {
             {/* display feedback from redux here */}
             {/* {JSON.stringify(itemToPost)} */}
             <div className="description"> {/** no .map with separate reducers */}
-                <p>{itemToPost.feeling}</p>
-                <p>{itemToPost.understanding}</p>
-                <p>{itemToPost.support}</p>
-                <p>{itemToPost.comments}</p>
+                <p>You are feeling: {itemToPost.feeling}</p>
+                <p>Your understanding: {itemToPost.understanding}</p>
+                <p>Your support: {itemToPost.support}</p>
+                <p>Your comments: {itemToPost.comments}</p>
             </div>
             {/* handle submit on click */}
             <form onSubmit={ handleSubmit } className="submit-field">
