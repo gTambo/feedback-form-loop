@@ -8,60 +8,6 @@ __Duration: 2-day sprint__
 
 Before beginning the project, I thought through the data pathways and used a visual chart to help flesh out my thoughts [LucidChart](https://lucid.app/lucidchart/938a8683-1062-4b0d-a7f4-cedf301ba500/edit?view_items=VrncJSMH1AkJ&invitationId=inv_e9026113-ea6a-45ce-b2ce-f65ed9d0c22a)
 
-I implemented the following steps to build this application:
-
-### Checklist 
-
-- [x] Initialize database and table(s)
-- [x] Check files and setup
-- [x] index.js page prepped with combine reducers
-- [ ] **GOAL: write comments as you go!**
-- [x] Router in App.jsx
-- [x] Header component imported into App
-- [x] page1 component
-    - [x] input form for type number, required
-    - [x] reducer in index
-    - [x] dispatch input as number
-    - [x] next button with link/history.push
-    - [x] display message if incomplete field
-- [x] page2 component
-    - [x] model after page1
-    - [x] added route to page one reducer
-- [x] page3 component
-    - [x] like pages 1 and 2
-    - [x] Add supporteed route to page one reducer
-- [x] page4 component
-    - [x] input form for string
-    - [x] dispatch string
-- [x] express post route
-- [x] review and submit page component
-    - [x] useSelector for feedback item(s)
-    - [x] display feedback items (form or table or ul or div?)
-    - [x] Object to Post
-    - [x] axios POST on submit
-    - [ ] anything else?
-- [x] success and reset page component
-    - [x] reset dispatcher
-    - [x] start new review button nav to page 1
-- [x] additional basic styling
-- [x] Update ReadMe (remove line at top)
-- [x] still needs more code comments
-
-### Stretch Goals 
-
-- [x] Update score functionality (navigate back)
-- [x] basic material UI
-    - [ ] cards, snackbars, nav bar, icons, theme?
-- [ ] Admin page component
-    - [x] display feedback Items from DB (axios and express GET)
-    - [ ] allow delete (axios and express DELETE)
-    - [ ] store Item to delete in redux state
-    - [ ] confirm delete component 
-    - [ ] delete with nav back to admin page
-    - [ ] flag feedback entry (conditional render?)
-- [ ] Deploy to Heroku
-    - [ ] find the special instructions for this (check syllabus and pool module)
-
 Below is an example of the code I wrote for a component page to leave feedback, four of which were used in the app, in additions to others.
 
 ``` // Check out this code 
@@ -99,12 +45,12 @@ Below is an example of the code I wrote for a component page to leave feedback, 
 }
 ```
 
-## Screen Shot
+## Screen Shots
 
 Here's what page one looks like:
 ![PageOne](./public/images/Page1.png)
 
-The comment page: 
+And the comment page: 
 ![CommentsPage](./public/images/Page4.png)
 
 And the review page:
