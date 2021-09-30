@@ -101,11 +101,14 @@ Below is an example of the code I wrote for a component page to leave feedback, 
 
 ## Screen Shot
 
-Here's what page one looks like 
+Here's what page one looks like:
 ![PageOne](./public/images/Page1.png)
 
-And the comment page: 
+The comment page: 
 ![CommentsPage](./public/images/Page4.png)
+
+And the review page:
+![ReviewPage](./public/images/ReviewPage.png)
 
 ### Prerequisites
 
