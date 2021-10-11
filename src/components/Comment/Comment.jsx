@@ -36,6 +36,7 @@ function Commentate () {
                     <Paper elevation={3} >
                     <TextField id="outlined-basic"
                                multiline 
+                               fullWidth
                                label="Comments"
                                variant="outlined" 
                                minRows={3}
