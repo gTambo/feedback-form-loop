@@ -24,19 +24,21 @@ function Commentate () {
         history.push('/review');
     }
     return (
+        <>
         <Grid container spacing={2} direction="column" justifyContent="space-around" alignItems="center">
             <Grid item xs={12} ><Paper elevation={2}>
                 <Typography variant="h4" component="h2"><strong>Comments</strong></Typography>
                 <Typography variant="h6" component="p">Do you have any additional comments?</Typography>
             </Paper></Grid>
+        </Grid>
         {/* <p>{feedbackComment}</p> look, it updates as I type! */} 
-            <Grid item xs={12}>
+            <Grid container justifyContent="space-evenly" direction="column" alignItems="center">
                 <form onSubmit={ handleClick } >
                 <Grid item xs={12} >
-                    <Paper elevation={3} >
+                    <Paper elevation={3}>
                     <TextField id="outlined-basic"
-                               multiline 
                                fullWidth
+                               multiline 
                                label="Comments"
                                variant="outlined" 
                                minRows={3}
@@ -54,7 +56,7 @@ function Commentate () {
             <Grid item>
                 <Button variant="outlined" onClick={ () => history.push("/supported") }>Previous Page</Button>
             </Grid>
-        </Grid>
+        </>
     )
 }
 

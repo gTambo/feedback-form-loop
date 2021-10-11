@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import PageSelector from '../PageSelector/PageSelector';
 import { 
     Button,
     Typography,
@@ -12,13 +13,10 @@ import {
     FormControl, 
     Fab,
 } from '@material-ui/core';
-// import {
-  
-   
-// } from '@material-ui/icons';
+
 
 function ReviewFeedback () {
-    const [selector, setSelector] = useState('');
+    // const [selector, setSelector] = useState('');
     const history = useHistory(); // for pushing to next page on click
     const storeInstance = useSelector(store => store); // will need entire store of reducers
     // TODO: use destructuring for store
@@ -30,23 +28,23 @@ function ReviewFeedback () {
         comments: storeInstance.pageFourReducer[0],
     };
 
-    const handleSelect = () => { // receives 'selector' variable from dropdown menu
-        console.log("in handleSelect; selector = ", selector);
-        switch(selector) { 
-            case "page 1":
-                history.push('/');
-                break;
-            case "page 2":
-                history.push('/understand');
-                break;
-            case "page 3":
-                history.push('/supported');
-                break;
-            case "page 4":
-                history.push('/comment');
-                break
-        }
-    }
+    // const handleSelect = () => { // receives 'selector' variable from dropdown menu
+    //     console.log("in handleSelect; selector = ", selector);
+    //     switch(selector) { 
+    //         case "page 1":
+    //             history.push('/');
+    //             break;
+    //         case "page 2":
+    //             history.push('/understand');
+    //             break;
+    //         case "page 3":
+    //             history.push('/supported');
+    //             break;
+    //         case "page 4":
+    //             history.push('/comment');
+    //             break
+    //     }
+    // }
 
     const handleSubmit = (event) => { // sent here by cform submission
         event.preventDefault(); // because input is within aform element
@@ -67,7 +65,7 @@ function ReviewFeedback () {
 
     return (
         <> {/** included dropdown selector for easy navigation to any page */}
-            <Box description="row" sx={{ minWidth: 20 }}>
+            {/* <Box description="row" sx={{ minWidth: 20 }}>
             <FormControl >
             <InputLabel id="demo-simple-select-label">Select Page</InputLabel>
             <Select
@@ -84,14 +82,14 @@ function ReviewFeedback () {
             </Select>
             <Button variant="outlined" color="inherit" onClick={handleSelect}>Go to page</Button>
             </FormControl>
-            </Box>
-
+            </Box> */}
  {/** still fuzzy on how the logic worked in the selector, 
              * but I got it to do what I wanted with some trial and error 
              * I am also still occasionally getting the following warning: 
              * Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.*/}
 
             {/* display feedback from redux here */}
+            <PageSelector />
             {/* {JSON.stringify(itemToPost)} */}
             <div className="description"> {/** no .map with separate reducers */}
                 <Typography variant="h6" component="p"><strong>You are feeling: </strong>{itemToPost.feeling}</Typography>
