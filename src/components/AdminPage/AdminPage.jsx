@@ -37,6 +37,7 @@ function AdminPage () {
     }
 
     const handleDelete = (recordId) => {
+        console.log("in Delete: ", recordId);
         axios.delete(`/feedback/delete/${recordId}`)
         .then(response => {
             getRecords();
@@ -71,7 +72,10 @@ function AdminPage () {
                     <TableCell align="right">{record.support}</TableCell>
                     <TableCell align="right">{record.comments}</TableCell>
                     <TableCell align="right">{record.date}</TableCell>
-                    <Button variant="contained" size="small" component="span" onClick={handleDelete(record.id)}>Delete</Button>
+                    <TableCell align="right">
+                        <Button variant="contained" size="small" onClick={() => handleDelete(record.id)}>Delete
+                        </Button>
+                    </TableCell>
                     </TableRow>
                 ))}
                 </TableBody>
