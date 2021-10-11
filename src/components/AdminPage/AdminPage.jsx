@@ -9,6 +9,7 @@ import {
     TableHead,
     TableRow,
     Paper,
+    Button
 } from '@material-ui/core';
 
 
@@ -34,6 +35,15 @@ function AdminPage () {
             alert('Something went wrong.');
         })
     }
+
+    const handleDelete = (recordId) => {
+        axios.delete(`/feedback/delete/${recordId}`)
+        .then(response => {
+            getRecords();
+        }).catch( err => {
+            console.log(err);
+        })
+    }
     
     return (
         <div className="records-table">
@@ -56,13 +66,12 @@ function AdminPage () {
                 {feedbackRecords.map( (record) => (<TableRow key={record.id}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                    <TableCell component="th" scope="row">
-                    {record.feeling}
-                    </TableCell>
+                    <TableCell component="th" scope="row">{record.feeling}</TableCell>
                     <TableCell align="right">{record.understanding}</TableCell>
                     <TableCell align="right">{record.support}</TableCell>
                     <TableCell align="right">{record.comments}</TableCell>
                     <TableCell align="right">{record.date}</TableCell>
+                    <Button variant="contained" size="small" component="span" onClick={handleDelete(record.id)}>Delete</Button>
                     </TableRow>
                 ))}
                 </TableBody>
