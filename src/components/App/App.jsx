@@ -5,8 +5,8 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import HowDoYouFeel from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
-import IsSupported from '../PageThree/PageThree';
-import Commentate from '../PageFour/PageFour';
+import IsSupported from '../Support/Support';
+import Commentate from '../Comment/Comment';
 import ReviewFeedback from '../ReviewSubmit/ReviewSubmit';
 import Reset from '../Reset/Reset';
 import AdminPage from '../AdminPage/AdminPage';
@@ -18,25 +18,25 @@ function App() {
       <Header />
       {/* Router file tree below */}
       <Router >
-        <div className="pages" >
+        <div>
           {/* Page one set to Home page, consider separate home page */}
           <Route exact path="/">
-            Page 1 of 4 <HowDoYouFeel />
+            <p className="pages">Page 1 of 4</p> <HowDoYouFeel />
           </Route>
           <Route exact path="/understand">
-            Page 2 of 4<Understanding />
+            <p className="pages">Page 2 of 4</p><Understanding />
           </Route>
           <Route exact path= "/supported">
-            Page 3 of 4<IsSupported />
+            <p className="pages">Page 3 of 4</p><IsSupported />
           </Route>
           <Route exact path="/comment">
-            Page 4 of 4 <Commentate />
+            <p className="pages">Page 4 of 4</p><Commentate />
           </Route>
           <Route exact path="/review">
-            Review and Submit <ReviewFeedback />
+            <p className="pages">Review and Submit</p><ReviewFeedback />
           </Route>
           <Route exact path="/reset">
-            Success and Restart <Reset />
+            <p className="pages">Success and Restart</p><Reset />
           </Route>
           <Route exact path="/supersecret">
             Admin <AdminPage />

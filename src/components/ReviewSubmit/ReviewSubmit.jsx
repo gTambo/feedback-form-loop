@@ -2,7 +2,20 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import { 
+    Button,
+    Typography,
+    Select,
+    InputLabel,
+    MenuItem,
+    Box,
+    FormControl, 
+    Fab,
+} from '@material-ui/core';
+// import {
+  
+   
+// } from '@material-ui/icons';
 
 function ReviewFeedback () {
     const [selector, setSelector] = useState('');
@@ -54,13 +67,33 @@ function ReviewFeedback () {
 
     return (
         <> {/** included dropdown selector for easy navigation to any page */}
-            <select value={selector} onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect()} >
+            <select value={selector} onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect} >
                 <option value="">Select page</option>
                 <option value="page 1">Page 1</option>
                 <option value="page 2">Page 2</option>
                 <option value="page 3">Page 3</option>
                 <option value="page 4">Page 4</option>
-            </select> {/** still fuzzy on how the logic worked in the selector, 
+            </select>
+            <Box description="row" sx={{ minWidth: 20 }}>
+            <FormControl >
+            <InputLabel id="demo-simple-select-label">Select Page</InputLabel>
+            <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={selector}
+                label="Select Page"
+                onChange={(event) => setSelector(event.target.value)}
+            >
+                <MenuItem value={"page 1"}>Page 1</MenuItem>
+                <MenuItem value={"page 2"}>Page 2</MenuItem>
+                <MenuItem value={"page 3"}>Page 3</MenuItem>
+                <MenuItem value={"page 4"}>Page 4</MenuItem>
+            </Select>
+            <Fab color="primary" aria-label="add"></Fab>
+            </FormControl>
+            </Box>
+
+ {/** still fuzzy on how the logic worked in the selector, 
              * but I got it to do what I wanted with some trial and error 
              * I am also still occasionally getting the following warning: 
              * Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.*/}
@@ -68,10 +101,10 @@ function ReviewFeedback () {
             {/* display feedback from redux here */}
             {/* {JSON.stringify(itemToPost)} */}
             <div className="description"> {/** no .map with separate reducers */}
-                <p>You are feeling: {itemToPost.feeling}</p>
-                <p>Your understanding: {itemToPost.understanding}</p>
-                <p>Your support: {itemToPost.support}</p>
-                <p>Your comments: {itemToPost.comments}</p>
+                <Typography variant="h6" component="p"><strong>You are feeling: </strong>{itemToPost.feeling}</Typography>
+                <Typography variant="h6" component="p"><strong>Your understanding: </strong>{itemToPost.understanding}</Typography>
+                <Typography variant="h6" component="p"><strong>Your support: </strong>{itemToPost.support}</Typography>
+                <Typography variant="h6" component="p"><strong>Your comments: </strong>{itemToPost.comments}</Typography>
             </div>
             {/* handle submit on click */}
             <form onSubmit={ handleSubmit } className="submit-field">

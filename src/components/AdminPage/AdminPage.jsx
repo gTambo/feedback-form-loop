@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Typography } from '@material-ui/core';
 
 
 function AdminPage () {
@@ -26,6 +27,7 @@ function AdminPage () {
     
     return (
         <div className="records-table">
+        <Typography variant="h3">Admin</Typography>
         <p>this is the admin page</p>
         <table>
             <thead>
