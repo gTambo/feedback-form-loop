@@ -6,17 +6,10 @@ import PageSelector from '../PageSelector/PageSelector';
 import { 
     Button,
     Typography,
-    Select,
-    InputLabel,
-    MenuItem,
-    Box,
-    FormControl, 
-    Fab,
 } from '@material-ui/core';
 
 
 function ReviewFeedback () {
-    // const [selector, setSelector] = useState('');
     const history = useHistory(); // for pushing to next page on click
     const storeInstance = useSelector(store => store); // will need entire store of reducers
     // TODO: use destructuring for store
@@ -27,24 +20,6 @@ function ReviewFeedback () {
         support: storeInstance.pageThreeReducer[0],
         comments: storeInstance.pageFourReducer[0],
     };
-
-    // const handleSelect = () => { // receives 'selector' variable from dropdown menu
-    //     console.log("in handleSelect; selector = ", selector);
-    //     switch(selector) { 
-    //         case "page 1":
-    //             history.push('/');
-    //             break;
-    //         case "page 2":
-    //             history.push('/understand');
-    //             break;
-    //         case "page 3":
-    //             history.push('/supported');
-    //             break;
-    //         case "page 4":
-    //             history.push('/comment');
-    //             break
-    //     }
-    // }
 
     const handleSubmit = (event) => { // sent here by cform submission
         event.preventDefault(); // because input is within aform element
@@ -64,26 +39,8 @@ function ReviewFeedback () {
 
 
     return (
-        <> {/** included dropdown selector for easy navigation to any page */}
-            {/* <Box description="row" sx={{ minWidth: 20 }}>
-            <FormControl >
-            <InputLabel id="demo-simple-select-label">Select Page</InputLabel>
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={selector}
-                label="Select Page"
-                onChange={(event) => setSelector(event.target.value)}
-            >
-                <MenuItem value={"page 1"}>Page 1</MenuItem>
-                <MenuItem value={"page 2"}>Page 2</MenuItem>
-                <MenuItem value={"page 3"}>Page 3</MenuItem>
-                <MenuItem value={"page 4"}>Page 4</MenuItem>
-            </Select>
-            <Button variant="outlined" color="inherit" onClick={handleSelect}>Go to page</Button>
-            </FormControl>
-            </Box> */}
- {/** still fuzzy on how the logic worked in the selector, 
+        <>
+            {/** still fuzzy on how the logic worked in the selector, 
              * but I got it to do what I wanted with some trial and error 
              * I am also still occasionally getting the following warning: 
              * Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.*/}
