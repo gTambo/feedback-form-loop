@@ -67,13 +67,6 @@ function ReviewFeedback () {
 
     return (
         <> {/** included dropdown selector for easy navigation to any page */}
-            <select value={selector} onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect} >
-                <option value="">Select page</option>
-                <option value="page 1">Page 1</option>
-                <option value="page 2">Page 2</option>
-                <option value="page 3">Page 3</option>
-                <option value="page 4">Page 4</option>
-            </select>
             <Box description="row" sx={{ minWidth: 20 }}>
             <FormControl >
             <InputLabel id="demo-simple-select-label">Select Page</InputLabel>
@@ -89,7 +82,7 @@ function ReviewFeedback () {
                 <MenuItem value={"page 3"}>Page 3</MenuItem>
                 <MenuItem value={"page 4"}>Page 4</MenuItem>
             </Select>
-            <Fab color="primary" aria-label="add"></Fab>
+            <Button variant="outlined" color="inherit" onClick={handleSelect}>Go to page</Button>
             </FormControl>
             </Box>
 

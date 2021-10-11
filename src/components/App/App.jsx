@@ -39,7 +39,7 @@ function App() {
             <p className="pages">Success and Restart</p><Reset />
           </Route>
           <Route exact path="/supersecret">
-            Admin <AdminPage />
+            <AdminPage />
           </Route>
         </div>
       </Router>

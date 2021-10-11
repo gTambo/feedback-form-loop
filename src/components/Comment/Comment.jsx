@@ -24,22 +24,22 @@ function Commentate () {
         history.push('/review');
     }
     return (
-        <Grid container rowSpacing={1} spacing={2} direction="column" justifyContent="space-around" alignItems="center">
-            <Grid item xs={12} >
+        <Grid container spacing={2} direction="column" justifyContent="space-around" alignItems="center">
+            <Grid item xs={12} ><Paper elevation={2}>
                 <Typography variant="h4" component="h2"><strong>Comments</strong></Typography>
-                <p className="description">Do you have any additional comments?</p>
-            </Grid>
+                <Typography variant="h6" component="p">Do you have any additional comments?</Typography>
+            </Paper></Grid>
         {/* <p>{feedbackComment}</p> look, it updates as I type! */} 
             <Grid item xs={12}>
                 <form onSubmit={ handleClick } >
-                <Grid item xs={12} gutterBottom>
+                <Grid item xs={12} >
                     <Paper elevation={3} >
                     <TextField id="outlined-basic"
                                multiline 
                                label="Comments"
                                variant="outlined" 
-                               rows={3}
-                               rowsMax={8}
+                               minRows={3}
+                               maxRows={8}
                                value={feedbackComment}
                                onChange={ (event) => setFeedbackComment(event.target.value) }           
                     />

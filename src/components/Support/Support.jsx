@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import Button from '@material-ui/core/Button';
+import { Button, Typography, Paper } from '@material-ui/core';
 
 // This whole page is a lotlike the last two, with some different variable names
 function IsSupported () {
@@ -25,7 +25,7 @@ function IsSupported () {
 
     return (
         <>
-        <p className="description">How well supported are you, on a scale of 1-5?</p>
+        <Paper elevation={2}><Typography variant="h4" component="h2"><strong>How well supported are you, on a scale of 1-5?</strong></Typography></Paper>
         <form onSubmit={ handleClick } className="submit-field">
         <input required 
                 type="number"

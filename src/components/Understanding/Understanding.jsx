@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
-import Button from '@material-ui/core/Button';
+import { Button, Typography, Paper } from '@material-ui/core';
 
 function Understanding () {
     // set those imports to useable variables
@@ -24,7 +24,7 @@ function Understanding () {
 
     return (
         <>
-        <p className="description">How well do you understand the content, on a scale of 1-5?</p>
+        <Paper elevation={2} ><Typography variant="h4" component="h2"><strong>How well do you understand the content, on a scale of 1-5?</strong></Typography></Paper>
         <form onSubmit={ handleClick } className='submit-field'>
         <input required
                 type="number" 
