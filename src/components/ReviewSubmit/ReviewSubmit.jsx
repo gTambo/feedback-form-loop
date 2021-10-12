@@ -2,10 +2,14 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import PageSelector from '../PageSelector/PageSelector';
+import { 
+    Button,
+    Typography,
+} from '@material-ui/core';
+
 
 function ReviewFeedback () {
-    const [selector, setSelector] = useState('');
     const history = useHistory(); // for pushing to next page on click
     const storeInstance = useSelector(store => store); // will need entire store of reducers
     // TODO: use destructuring for store
@@ -16,24 +20,6 @@ function ReviewFeedback () {
         support: storeInstance.pageThreeReducer[0],
         comments: storeInstance.pageFourReducer[0],
     };
-
-    const handleSelect = () => { // receives 'selector' variable from dropdown menu
-        console.log("in handleSelect; selector = ", selector);
-        switch(selector) { 
-            case "page 1":
-                history.push('/');
-                break;
-            case "page 2":
-                history.push('/understand');
-                break;
-            case "page 3":
-                history.push('/supported');
-                break;
-            case "page 4":
-                history.push('/comment');
-                break
-        }
-    }
 
     const handleSubmit = (event) => { // sent here by cform submission
         event.preventDefault(); // because input is within aform element
@@ -53,25 +39,20 @@ function ReviewFeedback () {
 
 
     return (
-        <> {/** included dropdown selector for easy navigation to any page */}
-            <select value={selector} onChange={ (event) => setSelector(event.target.value)} onSelect={handleSelect()} >
-                <option value="">Select page</option>
-                <option value="page 1">Page 1</option>
-                <option value="page 2">Page 2</option>
-                <option value="page 3">Page 3</option>
-                <option value="page 4">Page 4</option>
-            </select> {/** still fuzzy on how the logic worked in the selector, 
+        <>
+            {/** still fuzzy on how the logic worked in the selector, 
              * but I got it to do what I wanted with some trial and error 
              * I am also still occasionally getting the following warning: 
              * Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.*/}
 
             {/* display feedback from redux here */}
+            <PageSelector />
             {/* {JSON.stringify(itemToPost)} */}
             <div className="description"> {/** no .map with separate reducers */}
-                <p>You are feeling: {itemToPost.feeling}</p>
-                <p>Your understanding: {itemToPost.understanding}</p>
-                <p>Your support: {itemToPost.support}</p>
-                <p>Your comments: {itemToPost.comments}</p>
+                <Typography variant="h6" component="p"><strong>You are feeling: </strong>{itemToPost.feeling}</Typography>
+                <Typography variant="h6" component="p"><strong>Your understanding: </strong>{itemToPost.understanding}</Typography>
+                <Typography variant="h6" component="p"><strong>Your support: </strong>{itemToPost.support}</Typography>
+                <Typography variant="h6" component="p"><strong>Your comments: </strong>{itemToPost.comments}</Typography>
             </div>
             {/* handle submit on click */}
             <form onSubmit={ handleSubmit } className="submit-field">
