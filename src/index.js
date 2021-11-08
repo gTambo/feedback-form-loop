@@ -6,6 +6,16 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux'; // provides store to App; global state
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-212177133-1', {
+    debug: true,
+    titleCase: false,
+    gaOptions: {
+        userId: 254899002,
+        siteSpeedSampleRate: 100
+    }
+});
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const pageOneReducer = (state = [], action) => {
     console.log('Feedback Page Reducer');
